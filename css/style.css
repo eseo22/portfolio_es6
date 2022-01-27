@@ -1,3 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
+ul, ol, li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+body {
+  width: 100%;
+  overflow-x: hidden; }
+
+header {
+  width: 100%;
+  height: 100px;
+  border-bottom: 1px solid pink; }
+  header .inner {
+    width: 1180px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 50px 0px;
+    border: 1px solid hotpink; }
+    header .inner h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+      header .inner h1 a {
+        font-size: 30px;
+        color: #222; }
+    header .inner ul {
+      width: 200px;
+      border: 1px solid pink;
+      display: flex;
+      justify-content: space-between; }
+      header .inner ul:nth-of-type(1) {
+        position: absolute;
+        top: 50%;
+        left: 15vw; }
+      header .inner ul:nth-of-type(2) {
+        position: absolute;
+        top: 50%;
+        right: 15vw; }
+      header .inner ul li {
+        display: inline-block; }
+        header .inner ul li a {
+          color: #222; }
+
+figure {
+  width: 100%;
+  height: calc(100vh - 100px);
+  background: #eee; }
+
+footer {
+  width: 100%;
+  background: #bbb;
+  position: relative; }
+  footer .inner {
+    width: 1180px;
+    min-height: 200px;
+    border: 1px solid hotpink;
+    margin: 0 auto;
+    padding: 20px 0px;
+    position: relative; }
+    footer .inner h2 {
+      font-size: 25px;
+      font-weight: normal;
+      margin-bottom: 20px; }
+    footer .inner address {
+      width: 500px;
+      border: 1px solid pink;
+      font-size: 14px;
+      line-height: 20px;
+      font-style: normal;
+      margin-bottom: 40px; }
+    footer .inner ul {
+      width: 450px;
+      border: 1px solid hotpink;
+      position: absolute;
+      top: 24px;
+      right: 20px; }
+      footer .inner ul li {
+        width: 100px;
+        display: inline-flex;
+        justify-content: space-around; }
+        footer .inner ul li a {
+          color: #222; }
+    footer .inner p {
+      width: 100%;
+      border-top: 1px solid #555;
+      font-size: 14px;
+      padding-top: 10px; }
 
 /*# sourceMappingURL=style.css.map */
