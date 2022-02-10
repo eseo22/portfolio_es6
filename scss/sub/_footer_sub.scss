@@ -1,0 +1,45 @@
+#footer_sub{
+    width: 100%; 
+    background: #bbb;
+    position: relative;
+    
+    .inner{
+        width: 1180px; min-height: 200px;
+        //border: 1px solid hotpink;
+        margin: 0 auto; padding: 20px 0px;
+        position: relative;
+        h2{
+            font-size:25px; 
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+        address{
+            width: 500px;
+            //border: 1px solid pink;
+            font-size: 14px; line-height: 20px;
+            font-style: normal;
+            margin-bottom: 40px;
+        }
+        ul{
+            width: 450px;
+            //border: 1px solid hotpink;
+            position: absolute; top: 24px; right: 20px;
+    
+            li{
+                width:100px;
+                display: inline-flex;
+                justify-content: space-around;
+    
+                a{color: #222; }
+            }
+        }
+        p{
+            width: 100%;
+            border-top: 1px solid #555;
+            font-size: 14px; 
+            padding-top: 10px;
+        }
+    }
+
+    
+}

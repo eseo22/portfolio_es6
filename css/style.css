@@ -9,6 +9,173 @@ ul, ol, li {
 a {
   text-decoration: none; }
 
+#header_sub {
+  width: 100%;
+  height: 100px;
+  border-bottom: 1px solid pink; }
+  #header_sub .inner {
+    width: 1180px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 50px 0px;
+    border: 1px solid hotpink; }
+    #header_sub .inner h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+      #header_sub .inner h1 a {
+        font-size: 30px;
+        color: #222; }
+    #header_sub .inner ul {
+      width: 250px;
+      border: 1px solid pink;
+      display: flex;
+      justify-content: space-between; }
+      #header_sub .inner ul:nth-of-type(1) {
+        position: absolute;
+        top: 42%;
+        left: 8vw; }
+      #header_sub .inner ul:nth-of-type(2) {
+        position: absolute;
+        top: 42%;
+        right: 8vw; }
+      #header_sub .inner ul li {
+        display: inline-block; }
+        #header_sub .inner ul li a {
+          color: #222;
+          font-size: 18px; }
+
+#footer_sub {
+  width: 100%;
+  background: #bbb;
+  position: relative; }
+  #footer_sub .inner {
+    width: 1180px;
+    min-height: 200px;
+    margin: 0 auto;
+    padding: 20px 0px;
+    position: relative; }
+    #footer_sub .inner h2 {
+      font-size: 25px;
+      font-weight: normal;
+      margin-bottom: 20px; }
+    #footer_sub .inner address {
+      width: 500px;
+      font-size: 14px;
+      line-height: 20px;
+      font-style: normal;
+      margin-bottom: 40px; }
+    #footer_sub .inner ul {
+      width: 450px;
+      position: absolute;
+      top: 24px;
+      right: 20px; }
+      #footer_sub .inner ul li {
+        width: 100px;
+        display: inline-flex;
+        justify-content: space-around; }
+        #footer_sub .inner ul li a {
+          color: #222; }
+    #footer_sub .inner p {
+      width: 100%;
+      border-top: 1px solid #555;
+      font-size: 14px;
+      padding-top: 10px; }
+
+.content {
+  width: 100%; }
+  .content .sub_visual {
+    width: 100%;
+    height: 250px;
+    background: pink; }
+  .content .inner {
+    width: 1180px;
+    min-height: 500px;
+    margin: 0 auto; }
+
+.gallery {
+  width: 100%;
+  background: #eee; }
+  .gallery #searchBox {
+    width: 100%;
+    padding: 50px;
+    font-size: 0; }
+    .gallery #searchBox input {
+      width: 300px;
+      height: 30px;
+      background: #fff;
+      border: 1px solid #ddd;
+      padding-left: 10px; }
+    .gallery #searchBox button {
+      width: 80px;
+      height: 30px;
+      background: #333;
+      color: #fff;
+      border: none;
+      vertical-align: top; }
+  .gallery .inner {
+    width: 1180px;
+    margin: 0 auto; }
+    .gallery .inner .loading {
+      width: 100px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: 1s; }
+      .gallery .inner .loading.off {
+        opacity: 0; }
+    .gallery .inner #list {
+      opacity: 0;
+      transform: translateY(100px);
+      transition: 1s; }
+      .gallery .inner #list.on {
+        opacity: 1;
+        transform: translateY(0px); }
+      .gallery .inner #list::after {
+        content: '';
+        display: block;
+        clear: both; }
+      .gallery .inner #list li {
+        width: calc(100% /3);
+        float: left;
+        padding: 10px; }
+        .gallery .inner #list li div {
+          width: 100%;
+          background: #fff;
+          padding: 20px;
+          border-radius: 5px;
+          box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1); }
+          .gallery .inner #list li div > a > img {
+            width: 100%; }
+          .gallery .inner #list li div p {
+            font: 12px/1.2 'arial';
+            color: #777;
+            margin-top: 10px;
+            margin-bottom: 10px; }
+
+aside {
+  width: 50%;
+  height: 50vh;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  padding: 5vw; }
+  aside img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; }
+  aside .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    cursor: pointer; }
+
 body {
   width: 100%;
   overflow-x: hidden; }
@@ -33,27 +200,187 @@ header {
         font-size: 30px;
         color: #222; }
     header .inner ul {
-      width: 200px;
+      width: 250px;
       border: 1px solid pink;
       display: flex;
       justify-content: space-between; }
       header .inner ul:nth-of-type(1) {
         position: absolute;
-        top: 50%;
-        left: 15vw; }
+        top: 42%;
+        left: 8vw; }
       header .inner ul:nth-of-type(2) {
         position: absolute;
-        top: 50%;
-        right: 15vw; }
+        top: 42%;
+        right: 8vw; }
       header .inner ul li {
         display: inline-block; }
         header .inner ul li a {
-          color: #222; }
+          color: #222;
+          font-size: 18px; }
 
 figure {
   width: 100%;
   height: calc(100vh - 100px);
   background: #eee; }
+
+#intro {
+  width: 100%; }
+  #intro .wrap {
+    width: 100%;
+    font-size: 0; }
+    #intro .wrap .pic {
+      width: 33.3%;
+      height: 300px;
+      display: inline-block;
+      position: relative;
+      background: #000; }
+      #intro .wrap .pic img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.8; }
+      #intro .wrap .pic article {
+        width: 280px;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff; }
+        #intro .wrap .pic article h2 {
+          font-size: 20px;
+          margin-bottom: 20px; }
+        #intro .wrap .pic article p {
+          font-size: 14px;
+          margin-bottom: 20px; }
+        #intro .wrap .pic article a {
+          display: inline-block;
+          width: 80px;
+          height: 25px;
+          border: 1px solid #fff;
+          font-size: 12px;
+          line-height: 25px;
+          color: #fff; }
+
+#about .inner {
+  width: 1180px;
+  margin: 0 auto;
+  font-size: 0;
+  padding: 150px 0; }
+  #about .inner .about {
+    width: 100%; }
+    #about .inner .about .left {
+      width: 50%;
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: top; }
+      #about .inner .about .left h2 {
+        font-size: 25px;
+        margin-bottom: 20px; }
+      #about .inner .about .left p {
+        width: 85%; }
+        #about .inner .about .left p:nth-of-type(1) {
+          font-size: 18px;
+          margin-bottom: 30px; }
+        #about .inner .about .left p:nth-of-type(2) {
+          font-size: 16px;
+          margin-bottom: 40px; }
+      #about .inner .about .left a {
+        display: block;
+        width: 150px;
+        height: 46px;
+        font-size: 12px;
+        line-height: 40px;
+        border: 1px solid #000;
+        text-align: center;
+        color: #000; }
+    #about .inner .about .right {
+      width: 49%;
+      display: inline-block; }
+      #about .inner .about .right .pic {
+        width: 49%;
+        height: 340px;
+        background: #ddd;
+        display: inline-block; }
+        #about .inner .about .right .pic:nth-of-type(2) {
+          margin-left: 2%; }
+        #about .inner .about .right .pic img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; }
+
+#banner {
+  width: 100%;
+  border: 1px solid #000;
+  padding: 120px 0px;
+  background: url(../img/banner.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-attachment: fixed; }
+  #banner .inner {
+    width: 1180px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff; }
+    #banner .inner h3 {
+      font-size: 30px;
+      margin-bottom: 20px; }
+    #banner .inner p {
+      width: 500px;
+      margin: 0 auto;
+      font-size: 20px;
+      margin-bottom: 40px; }
+    #banner .inner a {
+      display: block;
+      width: 150px;
+      height: 46px;
+      font-size: 12px;
+      line-height: 46px;
+      border: 1px solid #fff;
+      margin: 0 auto;
+      color: #fff; }
+
+#product {
+  width: 100%; }
+  #product .inner {
+    width: 1180px;
+    margin: 0 auto;
+    padding: 150px 0px; }
+    #product .inner .picbox {
+      width: 100%; }
+      #product .inner .picbox .txt {
+        display: inline-block;
+        width: 280px;
+        vertical-align: top; }
+        #product .inner .picbox .txt h3 {
+          font-size: 20px;
+          margin-bottom: 20px; }
+        #product .inner .picbox .txt p {
+          font-size: 18px;
+          margin-bottom: 40px;
+          width: 90%; }
+        #product .inner .picbox .txt a {
+          display: block;
+          width: 150px;
+          height: 46px;
+          font-size: 12px;
+          line-height: 46px;
+          border: 1px solid #000;
+          text-align: center;
+          color: #000; }
+      #product .inner .picbox .pic {
+        width: 280px;
+        height: 300px;
+        background: #ddd;
+        display: inline-block;
+        margin-right: 10px; }
+        #product .inner .picbox .pic:last-child {
+          margin-right: 0px; }
+        #product .inner .picbox .pic img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; }
 
 footer {
   width: 100%;
@@ -62,7 +389,6 @@ footer {
   footer .inner {
     width: 1180px;
     min-height: 200px;
-    border: 1px solid hotpink;
     margin: 0 auto;
     padding: 20px 0px;
     position: relative; }
@@ -72,14 +398,12 @@ footer {
       margin-bottom: 20px; }
     footer .inner address {
       width: 500px;
-      border: 1px solid pink;
       font-size: 14px;
       line-height: 20px;
       font-style: normal;
       margin-bottom: 40px; }
     footer .inner ul {
       width: 450px;
-      border: 1px solid hotpink;
       position: absolute;
       top: 24px;
       right: 20px; }
