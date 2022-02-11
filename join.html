@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id="header_sub">
+        <div class="inner">
+            <h1><a href="index.html">Portfolio</a></h1>
+            <ul>
+                <li><a href="youtube.html">YOUTUBE</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+            </ul>
+            <ul>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="join.html">JOIN</a></li>
+            </ul>
+        </div>
+        
+
+    </header>
+    
+
+    <section class="content join">
+        <div class="sub_visual">
+            <div class="sub_visual">
+                <div class="pic"></div>
+                <div class="txt">
+                    <h1>Members <span> / 회원가입</span></h1>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+                
+            </div>
+        </div>
+        <div class="inner">
+            
+            <div class="txtbox">
+                <h2>회원가입</h2>
+                <p>회원이 되시면 혜택과 서비스를 누릴 수 있습니다.<br>이용약관과 개인정보 처리방침에 대한 안내를 읽고 동의해주세요.
+                </p>
+            </div>
+            <div class="spotbox">
+                <div class="left">
+                    <span>01</span>
+                    <div class="circle"></div>
+                    <p>본인인증</p>
+                </div>
+                <div class="center">
+                    <span>02</span>
+                    <div class="circle"></div>
+                    <p>정보입력</p>
+                </div>
+                <div class="right">
+                    <span>03</span>
+                    <div class="circle"></div>
+                    <p>가입완료</p>
+                </div>
+            </div>
+            <form action="result.html" method="get" id="myForm">
+                <!-- 기본정보 -->
+                <fieldset>
+                    <legend class="title">기본정보</legend>
+
+                    <table summary="회원의 아이디,비밀번호,이름,주소,전화번호,이메일,뉴스 수신여부 입력양식폼">
+                        <caption class="h">회원가입 입력양식폼</caption>
+                        <colgroup>
+
+                            <col style="width:30%;">
+                            
+                            <col style="width:70%;">
+                            
+                            </colgroup>
+                        <tr>
+                            <th scope="row">
+                                <label for="userid">아이디</label>
+                            </th>
+                            <td><input type="text" name="userid" id="userid" aria-required="true"><input type="button"
+                                    name="ID확인" value="ID확인" >
+                                <!-- <p>영문 소문자/숫자, 4~16자로 입력해주세요.</p> -->
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="userpw1">비밀번호</label></th>
+                            <td><input type="password" name="userpw1" id="userpw1" ><br>
+                                <!-- <p>영문 대소문자,숫자,또는 특수문자 중 1가지 이상 조합하여 10~16자로 입력해주세요.</p> -->
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="userpw2">비밀번호 확인</label></th>
+                            <td><input type="password" name="userpw2" id="userpw2" ></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="username">이름 </label></th>
+                            <td><input type="text" name="username" id="username" ></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="postcode">주소 </label></th>
+                            <td><input type="text" name="postcode" id="postcode"><input type="button" name="postserch"
+                                    value="우편번호">
+                                <input type="text" name="address" >
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="hp">휴대전화 </label></th>
+                            <td><input type="text" name="hpnum" id="hp" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="email">이메일 </label></th>
+                            <td><input type="email" name="email" id="email" ></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">뉴스메일</th>
+                            <td><label><input type="radio" name="subscribe" value="yes" checked>수신함</label>
+                                <label><input type="radio" name="subscribe" value="no">수신안함</label>
+                            </td>
+                        </tr>
+                    </table>
+
+                </fieldset>
+                <!-- 추가정보 -->
+                <fieldset class="add">
+                    <legend class="title">추가정보</legend>
+                    <table summary="생년월일,가입경로,sns채널,sns주소 입력양식폼">
+                        <caption class="h">추가정보 입력양식폼</caption>
+                        <colgroup>
+
+                            <col style="width:30%;">
+                            
+                            <col style="width:70%;">
+                            
+                            </colgroup>
+                        <tr>
+                            <th scope="row"><label for="userbirthday">생년월일</label></th>
+                            <td> <input type="date" name="userbirthday" id="userbirthday"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">가입경로</th>
+                            <td>
+                                <select name="join" >
+                                    <option value="">선택해주세요</option>
+                                    <option value="SNS">SNS</option>
+                                    <option value="blog">블로그</option>
+                                    <option value="cafe">카페</option>
+                                    <option value="search">검색 및 기타</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">SNS채널</th>
+                            <td>
+                                <label><input type="checkbox" name="sns" value="insta">유투브</label>
+                                <label><input type="checkbox" name="sns" value="youtube">카페</label>
+                                <label><input type="checkbox" name="sns" value="blog">블로그</label>
+                                <label><input type="checkbox" name="sns" value="cafe">인스타그램</label>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>SNS주소</th>
+                            <td><input type="text" name="usersns" placeholder="http://www.instagram.com/hello"></td>
+                        </tr>
+
+                    </table>
+
+
+                </fieldset>
+
+                <!-- 약관동의 -->
+                <fieldset class="agree">
+                    <legend class="title">약관동의</legend>
+                    <ul class="join_box">
+                        <li class="ckbox1">
+
+                            <label><input type="checkbox" name="chkAll" id="chkAll" class="chkAll">이용약관, 개인정보 수집 및 이용에
+                                모두 동의합니다.
+                            </label>
+
+                        </li>
+                        <li class="ckbox2">
+                            
+                                <label>
+                                    <input type="checkbox" name="chk" >이용약관 동의(필수)
+                                </label>
+                            
+                            <textarea name="agree1" id="agree1" cols="30" rows="10" disabled>  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab quidem vero temporibus reiciendis dolorem quas saepe neque, natus earum. Saepe modi laboriosam illum praesentium, delectus dolores corporis odio neque debitis? Maxime quisquam in recusandae alias amet numquam. Laboriosam quam praesentium iusto voluptate! Id optio culpa eum assumenda unde adipisci vero. Sequi, libero dolorem. Vitae assumenda ipsa magni exercitationem dolores repellendus minus ut alias, cumque saepe fuga nam dolore tenetur, vel blanditiis nemo voluptatibus architecto, consequuntur repudiandae eveniet dicta odio. Ullam excepturi saepe recusandae quidem neque molestiae consequatur mollitia necessitatibus quo aperiam, illum enim eius distinctio suscipit laboriosam quae iste. Quidem!
+                            </textarea>
+                        </li>
+                        <li class="ckbox2">
+
+                            
+                                <label>
+                                    <input type="checkbox" name="chk2" >개인정보 수집 및 이용에 대한 안내(필수)
+                                </label>
+                            
+                            <textarea name="agree2" id="agree2" cols="30" rows="10" disabled>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi labore ipsum quam quos cumque reiciendis, pariatur tempore natus rem ducimus velit illum qui officiis quibusdam excepturi animi quae esse sint? Suscipit facere eligendi accusantium cupiditate tempore quaerat a odio, inventore modi dolores quis recusandae animi culpa, placeat voluptas excepturi ducimus at aliquid id atque qui harum in! Quidem corrupti nihil pariatur, praesentium eaque placeat aspernatur eum suscipit molestiae odio asperiores. Quia ipsam sit laboriosam cumque sed mollitia quidem cum odio. Adipisci totam rerum facere, laboriosam similique eaque recusandae, vitae nobis voluptates modi eum non dolorum velit eveniet pariatur accusamus accusantium.
+                            </textarea>
+
+                        </li>
+                        
+
+                    </ul>
+
+                </fieldset>
+                <!-- 전송버튼 -->
+                <div class="btns">
+                    <input type="reset" value="취소하기">
+                    <input type="submit" value="가입하기">
+
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer id="footer_sub">
+        <div class="inner">
+            <h2>portfolio</h2>
+            <address>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 25 S-city, 54-gil World Cup Buk-ro, Mapo-gu, Seoul.
+                <br>Tel: 02-700-1234 / Fax: 02-700-1234 / Email : hello@abcd.com
+            </address>
+            <ul>
+                <li><a href="#">PRODUCTS</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">SHOP</a></li>
+                <li><a href="#">CONTACTS</a></li>
+            </ul>
+    
+            <p>
+                2022 PORTFOLIO &copy; ALL RIGHT RESERVED.
+            </p>
+        </div>
+        
+    </footer>
+</body>
+</html>
