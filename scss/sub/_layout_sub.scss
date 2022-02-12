@@ -2,19 +2,17 @@
 @import "header_sub";
 @import "footer_sub";
 
+
 .content {
     width: 100%;
-
     .sub_visual{
         width: 100%;
-        height: 250px;
-        background: pink;
-
-        
+        height: 300px;
     }
+    
     .inner{
         width: 1180px;
-        min-height: 500px;
+        
         margin: 0 auto;
     }
 }

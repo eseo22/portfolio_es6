@@ -4,7 +4,7 @@ const base = "https://www.flickr.com/services/rest/?";
 const method1 = "flickr.interestingness.getList";
 const method2 = "flickr.photos.search";
 const key = "c3497ae54a8e80023a954c8815e7b28e";
-const per_page = 18; 
+const per_page = 12; 
 const format = "json"; 
 const loading = document.querySelector(".loading");
 const input = document.querySelector("#search"); 
@@ -20,6 +20,7 @@ callData(url1);
 btn.addEventListener("click", e=>{
    let tag = input.value; 
    if(tag == "") return; 
+   
 
    const url = `${base}method=${method2}&api_key=${key}&per_page=${per_page}&format=${format}&nojsoncallback=1&tags=${tag}&privacy_filter=1`;
 
@@ -92,6 +93,7 @@ function createList(items){
                   <a href="${imgSrcBig}">
                      <img src="${imgSrc}" alt="">
                   </a>
+                  <span>How to</span>
                   <p>${data.title}</p>
                </div>
             </li>

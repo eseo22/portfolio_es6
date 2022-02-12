@@ -1,13 +1,14 @@
 #footer_sub{
     width: 100%; 
-    background: #bbb;
+    background: #fff8e9;;
     position: relative;
+    
     
     .inner{
         width: 1180px; min-height: 200px;
-        //border: 1px solid hotpink;
         margin: 0 auto; padding: 20px 0px;
         position: relative;
+        border-top: 1px solid #bbb;
         h2{
             font-size:25px; 
             font-weight: normal;
@@ -35,7 +36,6 @@
         }
         p{
             width: 100%;
-            border-top: 1px solid #555;
             font-size: 14px; 
             padding-top: 10px;
         }
