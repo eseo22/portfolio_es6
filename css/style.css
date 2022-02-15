@@ -13,6 +13,9 @@ a {
 fieldset {
   border: none; }
 
+input, a, select, option {
+  outline: 1; }
+
 .h {
   position: absolute;
   top: -9999px;
@@ -79,7 +82,7 @@ fieldset {
       width: 450px;
       position: absolute;
       top: 24px;
-      right: 20px; }
+      right: -20px; }
       #footer_sub .inner ul li {
         width: 100px;
         display: inline-flex;
@@ -103,26 +106,52 @@ fieldset {
 .gallery {
   width: 100%;
   background: #fff8e9; }
-  .gallery #searchBox {
+  .gallery > .intro {
     width: 100%;
-    padding: 50px;
-    font-size: 0; }
-    .gallery #searchBox input {
-      width: 300px;
-      height: 30px;
-      background: #fff;
-      border: 1px solid #ddd;
-      padding-left: 10px; }
-    .gallery #searchBox button {
-      width: 80px;
-      height: 30px;
-      background: #333;
-      color: #fff;
-      border: none;
-      vertical-align: top; }
+    margin-bottom: 100px; }
+    .gallery > .intro > .inner {
+      width: 1180px;
+      min-height: 200px;
+      margin: 0 auto;
+      position: relative; }
+      .gallery > .intro > .inner .txt {
+        width: 600px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 100px 0px 80px; }
+        .gallery > .intro > .inner .txt h1 {
+          font-size: 40px;
+          color: #222;
+          margin-bottom: 20px;
+          letter-spacing: 8px; }
+        .gallery > .intro > .inner .txt > p {
+          font-size: 15px/1;
+          color: #222; }
+      .gallery > .intro > .inner #searchBox {
+        width: 60%;
+        padding: 50px;
+        font-size: 0;
+        margin: 0 auto;
+        text-align: center; }
+        .gallery > .intro > .inner #searchBox input {
+          width: 300px;
+          height: 30px;
+          background-color: #fff8e9;
+          border: none;
+          border-bottom: 1px solid #333;
+          padding-left: 10px;
+          margin-right: 20px; }
+        .gallery > .intro > .inner #searchBox button {
+          width: 80px;
+          height: 30px;
+          background: #333;
+          color: #fff;
+          border: none;
+          vertical-align: top; }
   .gallery .inner {
     width: 1180px;
-    margin: 0 auto; }
+    margin: 0 auto 200px;
+    min-height: 500px; }
     .gallery .inner .loading {
       width: 100px;
       position: absolute;
@@ -183,41 +212,56 @@ aside {
     color: #fff;
     cursor: pointer; }
 
-.youtube .inner {
-  width: 100%;
-  height: 100vh;
-  padding: 10vh 15vw;
+.youtube > .intro .txt {
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 100px 0px 80px; }
+  .youtube > .intro .txt h1 {
+    font-size: 40px;
+    color: #222;
+    margin-bottom: 20px;
+    letter-spacing: 6px; }
+  .youtube > .intro .txt > p {
+    font-size: 15px/1;
+    color: #222; }
+.youtube > .inner {
+  width: 1180px;
+  margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: center; }
-  .youtube .inner article {
-    width: 48%;
-    height: 30%;
-    border: 1px solid #999;
+  flex-wrap: wrap; }
+  .youtube > .inner article {
+    width: 50%;
+    border-right: 1px solid #999;
+    border-bottom: 1px solid #999;
     display: flex;
-    padding: 10px;
-    justify-content: space-between;
-    margin-bottom: 50px; }
-    .youtube .inner article .pic {
-      width: 40%;
-      height: 100%; }
-      .youtube .inner article .pic img {
+    flex-wrap: wrap;
+    padding: 50px;
+    justify-content: space-between; }
+    .youtube > .inner article:nth-of-type(2n) {
+      border-right: none; }
+    .youtube > .inner article:nth-of-type(5), .youtube > .inner article:nth-of-type(6) {
+      border-bottom: none; }
+    .youtube > .inner article .pic {
+      width: 100%;
+      height: 60%;
+      margin-bottom: 20px; }
+      .youtube > .inner article .pic img {
         width: 100%;
         height: 100%;
         object-fit: cover; }
-    .youtube .inner article .con {
-      width: 54%;
-      height: 100%;
+    .youtube > .inner article .con {
+      width: 100%;
+      height: 40%;
       position: relative; }
-      .youtube .inner article .con h2 {
+      .youtube > .inner article .con h2 {
         font: bold 16px/1.2 "맑은 고딕","arial";
         color: #555;
         margin-bottom: 15px; }
-      .youtube .inner article .con p {
+      .youtube > .inner article .con p {
         font: 12px/1.2 "맑은 고딕","arial";
         color: #888; }
-      .youtube .inner article .con span {
+      .youtube > .inner article .con span {
         font: bold 12px/1.2 "arial";
         color: orange;
         position: absolute;
@@ -250,19 +294,22 @@ aside {
       margin: 0 auto; }
       .about > .intro .inner .txt {
         width: 600px;
-        padding: 100px 0px; }
+        margin: 0 auto;
+        text-align: center;
+        padding: 100px 0px 80px; }
         .about > .intro .inner .txt h1 {
           font-size: 40px;
           color: #222;
-          margin-bottom: 10px; }
+          margin-bottom: 10px;
+          letter-spacing: 8px; }
         .about > .intro .inner .txt > p {
           font-size: 15px/1;
           color: #222; }
       .about > .intro .inner .txtbox {
-        border: 1px solid pink;
         width: 600px;
         margin: 0 auto;
-        text-align: center; }
+        text-align: center;
+        margin-bottom: 100px; }
         .about > .intro .inner .txtbox p {
           font-size: 15px;
           line-height: 1.4;
@@ -308,7 +355,7 @@ aside {
   .about .banner2 > .inner {
     width: 1180px;
     height: 50vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url(../../img/bread4.jpg) no-repeat center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url(../img/bread4.jpg) no-repeat center/cover;
     position: relative; }
     .about .banner2 > .inner .txtbox {
       width: 25%;
@@ -384,7 +431,7 @@ aside {
     width: 100%;
     height: 300px;
     position: relative;
-    background-color: #000; }
+    background-color: #fff8e9; }
     .join .sub_visual > .pic {
       width: 100%;
       height: 100%;
@@ -400,15 +447,17 @@ aside {
       transform: translate(-50%, -50%); }
       .join .sub_visual > .txt h1 {
         font-size: 40px;
-        color: #fff;
+        color: #222;
         text-align: center;
-        margin-bottom: 10px; }
+        margin-bottom: 10px;
+        letter-spacing: 4px; }
         .join .sub_visual > .txt h1 span {
           font-size: 15px;
-          color: #fff; }
+          color: #222;
+          letter-spacing: 0px; }
       .join .sub_visual > .txt > p {
         font-size: 15px/1;
-        color: #fff; }
+        color: #222; }
   .join .inner {
     width: 1180px;
     margin: 0 auto; }
@@ -474,13 +523,11 @@ aside {
         border-collapse: collapse; }
         .join .inner form fieldset table tr {
           width: 100%;
-          height: 60px;
-          border-bottom: 1px solid #eee; }
+          height: 60px; }
           .join .inner form fieldset table tr th {
             width: 20%;
             padding: 10px 0px 10px 40px;
-            text-align: left;
-            background-color: #f5f5f5; }
+            text-align: right; }
             .join .inner form fieldset table tr th label {
               font-size: 15px;
               color: #222;
@@ -493,9 +540,9 @@ aside {
               height: 36px;
               padding-left: 10px;
               font-size: 15px;
+              background-color: #fff8e9;
               vertical-align: top;
-              background: #f5f5f5;
-              border: 1px solid #eee; }
+              border: 1px solid #222; }
           .join .inner form fieldset table tr:nth-of-type(1) td input:nth-of-type(1), .join .inner form fieldset table tr:nth-of-type(5) td input:nth-of-type(1) {
             margin-right: 12px; }
           .join .inner form fieldset table tr:nth-of-type(1) td input:nth-of-type(2), .join .inner form fieldset table tr:nth-of-type(5) td input:nth-of-type(2) {
@@ -506,23 +553,14 @@ aside {
             width: 100px;
             vertical-align: middle;
             padding-left: 0px; }
-          .join .inner form fieldset table tr:nth-of-type(5) th {
-            position: relative; }
-            .join .inner form fieldset table tr:nth-of-type(5) th label {
-              display: block;
-              position: absolute;
-              top: 25px; }
-          .join .inner form fieldset table tr:nth-of-type(5) td input:nth-of-type(3) {
-            width: 500px;
-            margin-top: 20px; }
-          .join .inner form fieldset table tr:nth-of-type(8) th {
+          .join .inner form fieldset table tr:nth-of-type(6) th {
             font-size: 15px;
             color: #222;
             font-weight: normal; }
-          .join .inner form fieldset table tr:nth-of-type(8) td label {
+          .join .inner form fieldset table tr:nth-of-type(6) td label {
             font-size: 15px;
             margin-right: 20px; }
-            .join .inner form fieldset table tr:nth-of-type(8) td label input {
+            .join .inner form fieldset table tr:nth-of-type(6) td label input {
               width: 15px;
               height: 20px;
               margin-right: 15px;
@@ -540,8 +578,8 @@ aside {
       text-align: center;
       font-size: 15px;
       color: #222;
-      background: #f5f5f5;
-      border: none; }
+      background: #fff8e9;
+      border: 1px solid #222; }
       .join .inner form .add table tr:nth-of-type(2) td select option {
         font-size: 15px;
         color: #000; }
@@ -561,6 +599,8 @@ aside {
       .join .inner form .agree .join_box {
         padding: 40px; }
         .join .inner form .agree .join_box > li {
+          width: 62%;
+          margin: 0 auto;
           margin-bottom: 40px; }
           .join .inner form .agree .join_box > li label {
             display: block;
@@ -579,18 +619,19 @@ aside {
           height: 140px;
           font: 15px/1.4 'Noto Sans KR';
           color: #666;
-          padding: 10px 20px; }
+          padding: 10px 20px;
+          background-color: #fff; }
     .join .inner form .btns {
-      width: 80%;
+      width: 45%;
       margin: 0 auto;
-      padding: 0px 40px;
       display: flex;
       justify-content: flex-end; }
       .join .inner form .btns > input {
         font: bold 15px/1 'Noto Sans KR';
-        width: 170px;
-        height: 70px;
-        cursor: pointer; }
+        width: 50%;
+        height: 60px;
+        cursor: pointer;
+        background-color: #fff8e9; }
       .join .inner form .btns input[type=reset] {
         border: 1px solid #524C4A;
         color: #505050;
@@ -752,84 +793,112 @@ body {
   overflow-x: hidden;
   background-color: #fff8e9; }
 
-header {
+main {
   width: 100%;
-  height: 100px; }
-  header .inner {
-    width: 1180px;
-    height: 100%;
-    margin: 0 auto;
-    position: relative;
-    padding: 50px 0px; }
-    header .inner h1 {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%); }
-      header .inner h1 a {
-        font-size: 30px;
-        color: #222; }
-    header .inner ul {
-      width: 250px;
-      display: flex;
-      justify-content: space-between; }
-      header .inner ul:nth-of-type(1) {
-        position: absolute;
-        top: 42%;
-        left: 8vw; }
-      header .inner ul:nth-of-type(2) {
-        position: absolute;
-        top: 42%;
-        right: 8vw; }
-      header .inner ul li {
-        display: inline-block; }
-        header .inner ul li a {
-          color: #222;
-          font-size: 18px; }
-
-figure {
-  width: 100%;
-  height: calc(100vh - 100px);
-  background: #eee; }
-
-#intro {
-  width: 100%; }
-  #intro .wrap {
+  height: 100vh;
+  position: relative; }
+  main header {
     width: 100%;
-    font-size: 0; }
-    #intro .wrap .pic {
-      width: 33.3%;
-      height: 300px;
-      display: inline-block;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2; }
+    main header #navi a {
+      display: block;
+      width: 100%;
+      height: 30px;
+      position: fixed;
+      top: -30px;
+      left: 0;
+      background: #444;
+      text-align: center;
+      font: 16px/30px "arial";
+      color: #fff; }
+      main header #navi a.on {
+        top: 0px; }
+    main header .inner {
+      width: 1180px;
+      height: 100%;
+      margin: 0 auto;
       position: relative;
-      background: #000; }
-      #intro .wrap .pic img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        opacity: 0.8; }
-      #intro .wrap .pic article {
-        width: 280px;
-        text-align: center;
+      padding: 50px 0px; }
+      main header .inner h1 {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
-        color: #fff; }
-        #intro .wrap .pic article h2 {
-          font-size: 20px;
-          margin-bottom: 20px; }
-        #intro .wrap .pic article p {
-          font-size: 14px;
-          margin-bottom: 20px; }
-        #intro .wrap .pic article a {
-          display: inline-block;
-          width: 80px;
-          height: 25px;
-          border: 1px solid #fff;
-          font-size: 12px;
-          line-height: 25px;
+        transform: translate(-50%, -50%); }
+        main header .inner h1 a {
+          font-size: 30px;
           color: #fff; }
+      main header .inner ul {
+        width: 250px;
+        display: flex;
+        justify-content: space-between; }
+        main header .inner ul:nth-of-type(1) {
+          position: absolute;
+          top: 42%;
+          left: 8vw; }
+        main header .inner ul:nth-of-type(2) {
+          position: absolute;
+          top: 42%;
+          right: 8vw; }
+        main header .inner ul li {
+          display: inline-block; }
+          main header .inner ul li a {
+            color: #fff;
+            font-size: 18px; }
+  main figure {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0; }
+    main figure img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+
+#intro {
+  width: 100%; }
+  #intro > .inner {
+    width: 1180px;
+    margin: 0 auto; }
+    #intro > .inner .wrap {
+      width: 100%;
+      font-size: 0; }
+      #intro > .inner .wrap .pic {
+        width: 33.3%;
+        height: 340px;
+        display: inline-block;
+        position: relative;
+        background-color: #000; }
+        #intro > .inner .wrap .pic img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          opacity: 0.8; }
+        #intro > .inner .wrap .pic article {
+          width: 280px;
+          text-align: center;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: #fff; }
+          #intro > .inner .wrap .pic article h2 {
+            font-size: 20px;
+            margin-bottom: 20px; }
+          #intro > .inner .wrap .pic article p {
+            font-size: 14px;
+            margin-bottom: 20px; }
+          #intro > .inner .wrap .pic article a {
+            display: inline-block;
+            width: 80px;
+            height: 25px;
+            border: 1px solid #fff;
+            font-size: 12px;
+            line-height: 25px;
+            color: #fff; }
 
 #about .inner {
   width: 1180px;
@@ -975,7 +1044,7 @@ footer {
       width: 450px;
       position: absolute;
       top: 24px;
-      right: 20px; }
+      right: -20px; }
       footer .inner ul li {
         width: 100px;
         display: inline-flex;

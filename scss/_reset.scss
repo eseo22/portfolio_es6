@@ -4,4 +4,6 @@
 ul,ol,li{list-style: none;}
 a{text-decoration: none;}
 fieldset{border: none;}
+input, a, select, option{outline: 1;}
+
 .h{position: absolute; top: -9999px; opacity: 0;}

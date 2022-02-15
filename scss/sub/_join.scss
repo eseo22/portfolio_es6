@@ -5,7 +5,7 @@
     .sub_visual{
         width: 100%; height: 300px;
         position: relative;
-        background-color: #000;
+        background-color: #fff8e9;
         
         
         >.pic{
@@ -20,16 +20,18 @@
             position: absolute; top: 50%; left: 50%;
             transform: translate(-50%, -50%);
             h1{
-                font-size: 40px; color: #fff; 
+                font-size: 40px; color: #222; 
                 text-align: center;
                 margin-bottom: 10px;
+                letter-spacing: 4px;
     
                 span{
-                    font-size:15px; color: #fff;
+                    font-size:15px; color: #222;
+                    letter-spacing: 0px;
                 }
             }
             >p{
-                font-size: 15px/1; color: #fff;
+                font-size: 15px/1; color: #222;
             }
         }
     }
@@ -119,14 +121,14 @@
                     tr{
                         width: 100%;
                         height: 60px;
-                        border-bottom:1px solid #eee;
+                        //border-bottom:1px solid #eee;
 
                         
                         th{
                             width: 20%;
                             padding: 10px 0px 10px 40px;
-                            text-align: left;
-                            background-color: #f5f5f5;
+                            text-align: right;
+                            
 
                             label{
                                 font-size:15px;
@@ -144,10 +146,9 @@
                                 height: 36px;
                                 padding-left: 10px;
                                 font-size: 15px;
-                                
+                                background-color: #fff8e9;
                                 vertical-align: top;
-                                background: #f5f5f5;
-                                border: 1px solid #eee;
+                                border: 1px solid #222;
 
 
                                 
@@ -169,27 +170,11 @@
                                     padding-left:0px;
                                 }
                             }
-                           
                         }
 
-                        &:nth-of-type(5){
-                            th{
-                                position: relative;
-                                label{
-                                    display: block;
-                                    position: absolute; top: 25px;
-                                }
-                            }
-                            td{
-                                input:nth-of-type(3){
-                                    width: 500px;
-                                    margin-top: 20px;
-                                    
-                                }
-                            }
-                        }
                         
-                        &:nth-of-type(8){
+                        
+                        &:nth-of-type(6){
                             th{
                                 font-size: 15px;
                                 color: #222;
@@ -243,8 +228,8 @@
                                     text-align: center;
                                     font-size:15px;
                                     color: #222;
-                                    background: #f5f5f5;
-                                    border: none;
+                                    background: #fff8e9;
+                                    border: 1px solid #222;
 
                                     option{
                                         font-size: 15px;
@@ -288,6 +273,7 @@
                     padding: 40px;
                 
                     >li{
+                        width: 62%; margin: 0 auto;
                         margin-bottom: 40px;
                         label{
                             display: block;
@@ -307,6 +293,7 @@
                             width: 100%; height: 140px; 
                             font: 15px/1.4 'Noto Sans KR'; color: #666;
                             padding: 10px 20px;
+                            background-color: #fff;
                         }
                     }
 
@@ -318,16 +305,16 @@
 
             //전송버튼
             .btns{
-                width: 80%;
+                width: 45%;
                 margin: 0 auto;
-                padding: 0px 40px;
                 display: flex;
                 justify-content: flex-end;
                 
                 >input{
                     font:bold 15px/1 'Noto Sans KR'; 
-                    width: 170px; height: 70px;
+                    width: 50%; height: 60px;
                     cursor: pointer;
+                    background-color: #fff8e9;
                 }
                 input[type=reset]{
                     border: 1px solid #524C4A;

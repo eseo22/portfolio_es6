@@ -1,6 +1,7 @@
 const main = document.querySelector(".gallery"); 
 const frame = document.querySelector("#list"); 
 const base = "https://www.flickr.com/services/rest/?"; 
+const method = "flickr.people.getPhotos";
 const method1 = "flickr.interestingness.getList";
 const method2 = "flickr.photos.search";
 const key = "c3497ae54a8e80023a954c8815e7b28e";
@@ -10,18 +11,15 @@ const loading = document.querySelector(".loading");
 const input = document.querySelector("#search"); 
 const btn = document.querySelector(".btnSearch"); 
 
-const url1 = `${base}method=${method1}&api_key=${key}&per_page=${per_page}&format=${format}&nojsoncallback=1`; 
+const url = `${base}method=${method}&api_key=${key}&per_page=${per_page}&format=${format}&nojsoncallback=1&user_id=131793185@N08`; 
+const url2 = `${base}method=${method1}&api_key=${key}&per_page=${per_page}&format=${format}&nojsoncallback=1`; 
 
-const url2 = `${base}method=${method2}&api_key=${key}&per_page=${per_page}&format=${format}&nojsoncallback=1&tags=bread`;
-
-callData(url1); 
+callData(url); 
 
 
 btn.addEventListener("click", e=>{
    let tag = input.value; 
    if(tag == "") return; 
-   
-
    const url = `${base}method=${method2}&api_key=${key}&per_page=${per_page}&format=${format}&nojsoncallback=1&tags=${tag}&privacy_filter=1`;
 
    callData(url); 
@@ -29,7 +27,6 @@ btn.addEventListener("click", e=>{
 input.addEventListener("keypress", e=>{
    if(e.key = "Enter"){
       let tag = input.value; 
-
       if(tag == "") return; 
       const url = `${base}method=${method2}&api_key=${key}&per_page=${per_page}&format=${format}&nojsoncallback=1&tags=${tag}&privacy_filter=1`;
 
