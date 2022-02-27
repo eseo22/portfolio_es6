@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfolio es6</title>
     <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/anime.js"></script>
     <script defer src="js/main.js"></script>
 </head>
 
 <body>
-    <main>
+    <main class="myScroll">
         <header>
             <div id="navi">
                 <a href="#">상단 바로가기</a>
@@ -38,7 +39,7 @@
     </main>
     
     
-    <section id="intro">
+    <section id="intro" class="myScroll">
         <div class="inner">
             <div class="wrap">
                 <div class="pic">
@@ -70,7 +71,7 @@
         </div>
         
     </section>
-    <section id="about">
+    <section id="about" class="myScroll">
         <div class="inner">
             <div class="wrap">
                 <div class="left">
@@ -95,18 +96,18 @@
     </section>
     <section id="banner">
         <div class="inner">
-                <h3>Delicious Alternatives</h3>
+                <h2>Delicious Alternatives</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet fugiat iusto quos. Reprehenderit, iusto.</p>
                 <a href="#">READ MORE</a>
 
         </div>
     </section>
-    <section id="product">
+    <section id="product" class="myScroll">
         <div class="inner">
             
             <div class="picbox">
                 <div class="txt">
-                    <h3>Unspeakably Good</h3>
+                    <h2>Unspeakably Good</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a ex consequat, eleifend tortor ut, ornare urna. Duis scelerisque sit amet metus vel porta.</p>
                 <a href="#">READ MORE</a>
                 </div>
@@ -122,7 +123,12 @@
             </div>
         </div>
     </section>
-
+    <ul class="navi">
+        <li class="on"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+     </ul>
     <footer>
         <div class="inner">
             <h2>portfolio</h2>

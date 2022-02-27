@@ -125,7 +125,7 @@ input, a, select, option {
           margin-bottom: 20px;
           letter-spacing: 8px; }
         .gallery > .intro > .inner .txt > p {
-          font-size: 15px/1;
+          font-size: 15px;
           color: #222; }
       .gallery > .intro > .inner #searchBox {
         width: 60%;
@@ -223,7 +223,7 @@ aside {
     margin-bottom: 20px;
     letter-spacing: 6px; }
   .youtube > .intro .txt > p {
-    font-size: 15px/1;
+    font-size: 15px;
     color: #222; }
 .youtube > .inner {
   width: 1180px;
@@ -303,7 +303,7 @@ aside {
           margin-bottom: 10px;
           letter-spacing: 8px; }
         .about > .intro .inner .txt > p {
-          font-size: 15px/1;
+          font-size: 15px;
           color: #222; }
       .about > .intro .inner .txtbox {
         width: 600px;
@@ -456,7 +456,7 @@ aside {
           color: #222;
           letter-spacing: 0px; }
       .join .sub_visual > .txt > p {
-        font-size: 15px/1;
+        font-size: 15px;
         color: #222; }
   .join .inner {
     width: 1180px;
@@ -871,12 +871,20 @@ main {
         height: 340px;
         display: inline-block;
         position: relative;
-        background-color: #000; }
+        background-color: #000;
+        overflow: hidden; }
+        #intro > .inner .wrap .pic:hover img {
+          opacity: 0.4;
+          transform: scale(1.2); }
+        #intro > .inner .wrap .pic:hover article a {
+          color: #222;
+          background-color: #fff; }
         #intro > .inner .wrap .pic img {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          opacity: 0.8; }
+          opacity: 0.8;
+          transition: 0.5s; }
         #intro > .inner .wrap .pic article {
           width: 280px;
           text-align: center;
@@ -898,8 +906,12 @@ main {
             border: 1px solid #fff;
             font-size: 12px;
             line-height: 25px;
-            color: #fff; }
+            color: #fff;
+            transition: 0.5s; }
 
+#about.on .inner .wrap .right .pic {
+  transform: translateY(0);
+  opacity: 1; }
 #about .inner {
   width: 1180px;
   margin: 0 auto;
@@ -928,19 +940,27 @@ main {
         width: 150px;
         height: 46px;
         font-size: 12px;
-        line-height: 40px;
+        line-height: 46px;
         border: 1px solid #000;
         text-align: center;
-        color: #000; }
+        color: #000;
+        transition: 0.5s; }
+        #about .inner .wrap .left a:hover {
+          color: #fff;
+          background-color: #222; }
     #about .inner .wrap .right {
       width: 49%;
       display: inline-block; }
       #about .inner .wrap .right .pic {
         width: 49%;
         height: 340px;
-        display: inline-block; }
+        display: inline-block;
+        transform: translateY(80px);
+        opacity: 0;
+        transition: 1s; }
         #about .inner .wrap .right .pic:nth-of-type(2) {
-          margin-left: 2%; }
+          margin-left: 2%;
+          transition-delay: 0.2s; }
         #about .inner .wrap .right .pic img {
           width: 100%;
           height: 100%;
@@ -949,7 +969,7 @@ main {
 #banner {
   width: 100%;
   border: 1px solid #000;
-  padding: 120px 0px;
+  padding: 60px 0px;
   background: url(../img/banner.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -960,7 +980,7 @@ main {
     margin: 0 auto;
     text-align: center;
     color: #fff; }
-    #banner .inner h3 {
+    #banner .inner h2 {
       font-size: 30px;
       margin-bottom: 20px; }
     #banner .inner p {
@@ -976,10 +996,17 @@ main {
       line-height: 46px;
       border: 1px solid #fff;
       margin: 0 auto;
-      color: #fff; }
+      color: #fff;
+      transition: 0.5s; }
+      #banner .inner a:hover {
+        color: #222;
+        background-color: #fff; }
 
 #product {
   width: 100%; }
+  #product.on .inner .picbox .pic {
+    transform: translateY(0);
+    opacity: 1; }
   #product .inner {
     width: 1180px;
     margin: 0 auto;
@@ -991,7 +1018,7 @@ main {
         width: 280px;
         vertical-align: top; }
         #product .inner .picbox .txt h3 {
-          font-size: 20px;
+          font-size: 25px;
           margin-bottom: 20px; }
         #product .inner .picbox .txt p {
           font-size: 18px;
@@ -1005,19 +1032,46 @@ main {
           line-height: 46px;
           border: 1px solid #000;
           text-align: center;
-          color: #000; }
+          color: #000;
+          transition: 0.5s; }
+          #product .inner .picbox .txt a:hover {
+            color: #fff;
+            background-color: #222; }
       #product .inner .picbox .pic {
         width: 280px;
-        height: 300px;
+        height: 340px;
         background: #ddd;
         display: inline-block;
-        margin-right: 10px; }
-        #product .inner .picbox .pic:last-child {
+        margin-right: 10px;
+        transform: translateY(80px);
+        transition: 1s;
+        opacity: 0; }
+        #product .inner .picbox .pic:nth-of-type(3) {
+          transition-delay: 0.2s; }
+        #product .inner .picbox .pic:nth-of-type(4) {
+          transition-delay: 0.4s;
           margin-right: 0px; }
         #product .inner .picbox .pic img {
           width: 100%;
           height: 100%;
           object-fit: cover; }
+
+.navi {
+  position: fixed;
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%); }
+  .navi li {
+    width: 12px;
+    height: 12px;
+    border-radius: 10px;
+    background: #bbb;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: 0.5s; }
+    .navi li.on {
+      height: 40px;
+      background: orange; }
 
 footer {
   width: 100%;
