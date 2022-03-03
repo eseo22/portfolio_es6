@@ -59,7 +59,6 @@ lis.forEach((el, index) => {
 
 function setPos(){
   posArr = []; 
-  //section의 갯수만큼 반복을 돌면서 posArr에 세로위치값 저장 
   for(let el of sections){
     posArr.push(el.offsetTop); 
   }

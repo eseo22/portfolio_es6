@@ -47,7 +47,6 @@ main{
                 
                 display: flex;
                 justify-content: space-between;
-                //transform: translateY(-50%);
                 &:nth-of-type(1){
                     position: absolute; top: 42%; left:8vw;
                 }
@@ -88,7 +87,6 @@ main{
             .pic{
                 width:33.3%; height: 340px;
                 display: inline-block;
-                //border: 1px solid pink;
                 position: relative;
                 background-color: #000;
                 overflow: hidden;
@@ -110,7 +108,6 @@ main{
                     text-align: center;
                     position: absolute; top: 50%; left: 50%;
                     transform: translate(-50%,-50%);
-                    //border: 1px solid pink;
                     color: #fff;
 
                     
@@ -141,17 +138,14 @@ main{
     .inner{
         width: 1180px;
         margin: 0 auto;
-        //border: 1px solid pink;
         font-size: 0;
         padding: 150px 0;
 
         .wrap{
             width: 100%; 
-            //border: 1px solid hotpink;
             .left{
                 width: 50%; 
                 display: inline-block;
-                //border: 1px solid orange;
                 margin-right: 10px;
                 vertical-align: top;
     
@@ -188,7 +182,6 @@ main{
             .right{
                 width: 49%;
                 display: inline-block;
-                //border: 1px solid orangered;
                 
     
                 .pic{
@@ -223,7 +216,6 @@ main{
     .inner{
         width: 1180px;
         margin: 0 auto;
-        //border: 1px solid pink;
         text-align: center;
         color: #fff;
         h2{
@@ -339,14 +331,12 @@ footer{
         }
         address{
             width: 500px;
-            //border: 1px solid pink;
             font-size: 14px; line-height: 20px;
             font-style: normal;
             margin-bottom: 40px;
         }
         ul{
             width: 450px;
-            //border: 1px solid hotpink;
             position: absolute; top: 24px; right: -20px;
     
             li{
