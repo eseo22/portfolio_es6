@@ -14,7 +14,7 @@ btns.forEach((btn, index) => {
 const sections = document.querySelectorAll(".myScroll");
 const lis = document.querySelectorAll(".navi li");
 const lis_arr = Array.from(lis); 
-const base = -200;
+const base = -300;
 let posArr =[]; 
 
 setPos();
